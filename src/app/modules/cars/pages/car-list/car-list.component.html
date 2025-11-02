@@ -1,0 +1,38 @@
+<header id="header">
+    <h1>TuSegundazo.com</h1>
+    <hr class="divider">
+    <img src="assets/images/Banner.jpg" alt="Banner" class="img-fluid">
+</header>
+<hr>
+<main>
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">#</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Linea</th>
+                <th scope="col">Modelo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (car of cars; track $index) {
+            <tr>
+                <th scope="row">{{ car.id }}</th>
+                <td>{{  car.marca  }}</td>
+                <td>{{ car.linea }}</td>
+                <td>{{ car.modelo }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</main>
+<section class="car-details my-5">
+    <div class="d-flex flex-column">
+        <label for="renault">Total Renault: {{ renaultCount }}</label>
+        <label for="chevrolet">Total Chevrolet: {{ chevroletCount }}</label>
+        <label for="nissan">Total Nissan: {{ nissanCount }}</label>
+    </div>
+</section>
+<footer class="d-flex justify-content-center">
+    <p>{{ contactInfo }}</p>
+</footer>
